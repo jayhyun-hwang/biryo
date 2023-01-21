@@ -137,7 +137,7 @@ docker run -it --rm -v $(pwd):/root sbtscala/scala-sbt:eclipse-temurin-17.0.5_8_
 docker run -it --rm -v ${PWD}:/root sbtscala/scala-sbt:eclipse-temurin-17.0.5_8_1.8.2_3.2.1 sbt assembly
 ```
 
-target/scala-2.11 폴더에 `biryo.jar`이 만들어집니다.
+target/scala-2.13 폴더에 `biryo.jar`이 만들어집니다.
 
 ## How to Use
 
