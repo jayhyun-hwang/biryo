@@ -10,7 +10,7 @@
 
 ## Library Dependencies
 
-- Scala >= 2.11 (JDK >= 8)
+- Scala >= 2.11 (JDK >= 8) 또는 docker 환경
 - [jawn](https://github.com/non/jawn)
 - [parboiled2](https://github.com/sirthias/parboiled2)
 - [shapeless](https://github.com/milessabin/shapeless) (for parboiled2)
@@ -120,6 +120,22 @@
 3. `git clone https://github.com/MerHS/biryo`
 4. `cd biryo`
 5. `sbt assembly`
+
+target/scala-2.11 폴더에 `biryo.jar`이 만들어집니다.
+
+## How to build an Executable JAR using Docker
+
+1. docker의 sbt 컨테이너를 사용해 jar 파일을 빌드할 수 있습니다.
+
+biryo root 경로에서 명령어 실행
+- Mac/Linux
+```bash
+docker run -it --rm -v $(pwd):/root sbtscala/scala-sbt:eclipse-temurin-17.0.5_8_1.8.2_3.2.1 sbt assembly
+```
+- Windows PowerShell
+```powershell
+docker run -it --rm -v ${PWD}:/root sbtscala/scala-sbt:eclipse-temurin-17.0.5_8_1.8.2_3.2.1 sbt assembly
+```
 
 target/scala-2.11 폴더에 `biryo.jar`이 만들어집니다.
 
